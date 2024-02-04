@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import React from "react";
-import { getMovieDetailsCast } from '../../components/api/api';
+import { getMovieDetailsCast } from '../../api/api';
 
 import { useEffect, useState } from "react";
 import style from './coast.module.scss'

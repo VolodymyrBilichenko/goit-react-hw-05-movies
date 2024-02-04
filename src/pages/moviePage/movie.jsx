@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
-import { getMovieName } from '../../components/api/api';
+import { getMovieName } from '../../api/api';
 import style from './movie.module.scss';
 const Movie = () => {
   const location = useLocation()

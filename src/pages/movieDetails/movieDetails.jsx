@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { getMovieDetails } from '../../components/api/api';
+import { getMovieDetails } from '../../api/api';
 import style from './details.module.scss'
 const MovieDetails = () => {
   const location = useLocation();
