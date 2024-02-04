@@ -15,13 +15,13 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout/>}>
       <Route index element={<Home/>}/>
-      <Route path="*" element={<Navigate to="/movies" />} />
       <Route path="movies" element={<Movie/>}/>
       <Route path="movies/:movieid" element={<MovieDetails />}>
         <Route path="cast" element={<Cast/>}/>
         <Route path="Reviews" element={<Reviews/>}/>
         </Route>
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
       
     </Routes>
     

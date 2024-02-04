@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link, useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { getMovieName } from '../../api/api';
 import style from './movie.module.scss';
+import { MoviesList } from './components/MoviesList';
 
 const Movie = () => {
   const location = useLocation();
@@ -53,15 +54,9 @@ const Movie = () => {
       <button type="submit" className={style.btn}>
         search
       </button>
-      <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
-              {movie.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      <MoviesList movies={movies} location={location} />
+      
     </form>
   );
 };
